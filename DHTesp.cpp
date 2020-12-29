@@ -294,12 +294,14 @@ void DHTesp::readSensor()
 	else
 	{
 		humidity = rawHumidity * 0.1;
-
 		if (rawTemperature & 0x8000)
 		{
-			rawTemperature = -(int16_t)(rawTemperature & 0x7FFF);
+			temperature = (int16_t) (rawTemperature % 0x00FF);
+                        temperature = temperature*(-0.1);
 		}
-		temperature = ((int16_t)rawTemperature) * 0.1;
+                else {
+			temperature = ((int16_t)rawTemperature) * 0.1;
+                }
 	}
 
 	error = ERROR_NONE;
