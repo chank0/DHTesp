@@ -1,4 +1,4 @@
-DHTesp [![Build Status](https://travis-ci.com/beegee-tokyo/DHTesp.svg?branch=master)](https://travis-ci.com/beegee-tokyo/DHTesp)
+DHTesp 
 ===
 
 Forked from https://github.com/beegee-tokyo/DHTesp
